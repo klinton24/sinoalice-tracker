@@ -10,18 +10,19 @@ function App() {
     }
   );
 
-  let onSubmit = () => {
+  let onSubmit = (e) => {
+    e.preventDefault();
     console.log(user);
   }
 
-  let handleChange = ({ target }) => {
-    setUser({ 
-      [target.email]: target.value,
-      [target.password]: target.value,
-      [target.userName]: target.value,
+  let handleChange = e => {
+    const value = e.target.value;
+    setUser({
+      ...user,
+      [e.target.name]: value      
      });
   }
-  
+
   return (
     <div className="App">
         <h1>Login:</h1>
@@ -32,8 +33,8 @@ function App() {
           <input type="text" id="password" name="password" value={user.password} onChange={handleChange}/><br/>
           <label for="userName">User Name:</label>
           <input type="text" id="userName" name="userName" value={user.userName} onChange={handleChange}/><br/>
+          <button type="submit" onClick= {onSubmit} >Log In</button>
         </form>        
-        <button type="submit" onClick= {onSubmit} >Log In</button>
     </div>
   );
 }
