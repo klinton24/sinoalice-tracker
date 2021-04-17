@@ -1,0 +1,23 @@
+export const winLoss = [
+    {
+      opponentName: "Team Apples",
+      outcome: "win",
+      teamScore: 1546812,
+      opponentScore: 1249309,
+      date: "4/15/2021"
+    },
+    {
+        opponentName: "Team Oranges",
+        outcome: "lose",
+        teamScore: 1046812,
+        opponentScore: 1849309,
+        date: "4/16/2021"
+      },
+      {
+        opponentName: "Team Rick",
+        outcome: "win",
+        teamScore: 2046812,
+        opponentScore: 493309,
+        date: "4/17/2021"
+      }
+]
