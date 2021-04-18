@@ -1,13 +1,15 @@
 import './index.css';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Login from './components/Login';
 
 function App() {
 
   return (
-    <div className="App">
+    <Router className="App">
+      <Route path="/register">
       <Login />
-    </div>
+      </Route>
+    </Router>
   );
 }
 export default App;
