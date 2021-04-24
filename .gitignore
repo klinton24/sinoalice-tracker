@@ -114,6 +114,9 @@ server.js
 # testing
 /coverage
 
+# stuff
+keys.js
+
 # production
 /build
 
